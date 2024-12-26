@@ -77,26 +77,6 @@ body {
   color: #ffffff;
 }
 
-.hero-text {
-  position: relative;
-  top: 20%;
-  bottom: 20%;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 5vw; /* Размер шрифта подстраивается под ширину экрана */
-  color: white;
-  letter-spacing: 0.5vw; /* Расстояние между буквами */
-  line-height: 1.2; /* Расстояние между строками */
-  text-transform: uppercase;
-}
-
 .hero-text .line {
    margin: 0; /* Убираем отступы между строками */
 }
@@ -114,15 +94,25 @@ body {
 /* Основной текст */
 .hero-text {
   font-family: url('../fonts/Raleway-Bold.woff2'); /* путь к шрифтам */
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  position: relative;
+  top: 20%;
+  bottom: 20%;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
-  letter-spacing: 0.5em; /* Растягиваем буквы, подбираем это значение */
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 5vw; /* Размер шрифта подстраивается под ширину экрана */
+  color: white;
+  letter-spacing: 0.5vw; /* Расстояние между буквами */
+  line-height: 1.2; /* Расстояние между строками */
+  text-transform: uppercase;
 }
 
 .line {
@@ -236,12 +226,6 @@ body {
   overflow: hidden;
 }
 
-.lot-content {
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
-    padding: 20px;
-    left: 0;
-}
-
 /* Изображение карточки */
 .lot-image {
   width: 121px;
@@ -254,6 +238,7 @@ body {
 
 /* Контент карточки */
 .lot-content {
+  left: 0;
   padding-top: 20px;
   background-color: rgba(0, 0, 0, 0.7); /* Почти полупрозрачный чёрный фон */
   color: #ffffff;
