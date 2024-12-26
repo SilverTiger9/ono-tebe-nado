@@ -93,7 +93,6 @@ body {
 
 /* Основной текст */
 .hero-text {
-  font-family: url('../fonts/Raleway-Bold.woff2'); /* путь к шрифтам */
   width: 100%;
   height: 100%;
   position: relative;
