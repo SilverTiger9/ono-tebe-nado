@@ -45,7 +45,7 @@ body {
 
 /* Стили контактов */
 .contacts {
-  text-align: right; 
+  text-align: right;
   font-family: url('../fonts/Raleway-Regular.woff'); /* путь к шрифтам */
 }
 
@@ -75,7 +75,6 @@ body {
   background-size: cover; /* Растягивание картинки, чтобы она покрывала весь фон */
   position: relative;
   color: #ffffff;
-  position: relative;
 }
 
 .hero-text {
@@ -195,14 +194,14 @@ body {
 /* Эффект при наведении */
 .cta-button:hover {
   background: rgba(255, 255, 255, 0.2); /* белый полупрозрачный фон */
-  color: #ffffff; 
-}
+  color: #ffffff;
+  }
 
 /* Секция Лоты */
 .lots {
   width: 100%;
   padding: 50px 5%; /* Отступы сверху, снизу и по бокам */
-  background-color: #ffffff; 
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -230,7 +229,7 @@ body {
   width: 1052px;
   height: 692px;
   justify-content: space-between; /* равномерное распределение */
-  flex: 1; /* Растягивание карточки равномерно */  
+  flex: 1; /* Растягивание карточки равномерно */
   display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -248,7 +247,6 @@ body {
   width: 121px;
   height: 47px;
   left: 40px;
-
   background-size: cover;
   background-position: center;
   border-radius: 10px 10px 0 0; /* Скругление верхних углов */
@@ -267,7 +265,6 @@ body {
   height: 82px;
   top: 125px;
   left: 40px;
-  font-weight: bold;
   text-decoration: underline; /* Подчёркивание текста */
   text-align: left;
   margin-bottom: 10px;
@@ -349,7 +346,7 @@ body {
 .see-more {
   margin-top: 40px;
   font-size: 16px;
-  color: #000000; 
+  color: #000000;
   cursor: pointer;
   text-decoration: underline; /* Подчёркивание */
 }
@@ -358,8 +355,8 @@ body {
 .about-auction {
   width: 100%;
   padding: 50px 5%;
-  background-color: #ffffff; 
-  color: #000000; 
+  background-color: #ffffff;
+  color: #000000;
   line-height: 1.6;
 }
 
@@ -375,8 +372,8 @@ body {
 .logo-circle {
   width: 240px;
   height: 240px;
-  background-color: #000000; 
-  border-radius: 50%; 
+  background-color: #000000;
+  border-radius: 50%;
   display: flex;
   justify-content: center; /* Центр логотипа по горизонтали */
   align-items: center; /* Центр логотипа по вертикали */
@@ -384,7 +381,7 @@ body {
 
 /* Логотип */
 .about-logo { /* Размер логотипа */
-  width: 120px; 
+  width: 120px;
   height: auto;
 }
 
@@ -406,8 +403,8 @@ body {
 /* Общий стиль футера */
 .footer {
   width: 100%;
-  background-color: #ffffff; 
-  color: #000000; 
+  background-color: #ffffff;
+  color: #000000;
   padding: 20px 5%;
   display: flex;
   justify-content: space-between; /* равномерное распределение */
@@ -425,7 +422,7 @@ body {
 
 /* Ссылки в контактах */
 .footer-link {
-  color: #000000; 
+  color: #000000;
   text-decoration: none;
   margin-bottom: 5px;
   display: block; /* Новая ссылка с новой строки */
@@ -443,13 +440,13 @@ body {
 }
 
 .footer-nav-link {
-  color: #000000; 
+  color: #000000;
   text-decoration: none;
   font-size: 14px;
 }
 
 .footer-nav-link.active { /* Выделение активных элементов */
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .footer-nav-link:hover {
@@ -463,7 +460,7 @@ body {
 }
 
 .social-logo { /* Размер иконок */
-  width: 32px; 
+  width: 32px;
   height: 32px;
   cursor: pointer;
 }
