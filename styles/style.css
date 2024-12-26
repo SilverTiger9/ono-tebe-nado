@@ -1,1 +1,474 @@
-/* место для вашего кода */
+   
+  /* Общие стили */
+body {
+  margin: 0;
+  font-family: url('../fonts/Raleway-Bold.woff'); /* путь к шрифтам */
+}
+
+/* Стили header */
+.header {
+  width: 1052px;
+  height: 105px;
+  margin: 92px auto 0; /* Центровка и отступ сверху */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Стили навигации */
+.nav-menu {
+  display: flex;
+  gap: 20px; /* Отступ между пунктами */
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000000;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-link.active {
+  border-bottom: 1px solid #000000;
+  font-weight: bold;
+}
+
+.nav-link .bullet {
+  margin-right: 5px;
+}
+
+/* Стили логотипа */
+.logo img {
+  width: 129.11px;
+  height: 104.65px;
+}
+
+/* Стили контактов */
+.contacts {
+  text-align: right; 
+  font-family: url('../fonts/Raleway-Regular.woff'); /* путь к шрифтам */
+}
+
+.contact-link {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contacts address {
+  word-wrap: break-word; /* Старое название, поддерживается в большинстве браузеров */
+  overflow-wrap: anywhere; /* Современное название, для максимальной совместимости */
+  line-height: 1.5; /* читабельность текста */
+}
+
+/* Hero Section */
+.hero {
+  width: 1100px;
+  height: 757px; /* Полная высота экрана */
+  background: url('../images/cover.jpg') no-repeat center center; /* путь к изображению */
+  background-size: cover; /* Растягивание картинки, чтобы она покрывала весь фон */
+  position: relative;
+  color: #ffffff;
+  position: relative;
+}
+
+.hero-text {
+  position: relative;
+  top: 20%;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 5vw; /* Размер шрифта подстраивается под ширину экрана */
+  color: white;
+  letter-spacing: 0.5vw; /* Расстояние между буквами */
+  line-height: 1.2; /* Расстояние между строками */
+  text-transform: uppercase;
+}
+
+.hero-text .line {
+   margin: 0; /* Убираем отступы между строками */
+}
+
+/* Контейнер контента */
+.hero-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Расстояние текста по вертикали */
+}
+
+/* Основной текст */
+.hero-text {
+  font-family: url('../fonts/Raleway-Bold.woff2'); /* путь к шрифтам */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.5em; /* Растягиваем буквы, подбираем это значение */
+  justify-content: space-between;
+}
+
+.line {
+  font-size: 120px; /* Настрой размер шрифта */
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+}
+
+.line.top-left {
+  top: 15%; /* Отступ сверху */
+  left: 5%; /* Отступ слева */
+  letter-spacing: 25px;
+}
+
+.line.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрирование текста */
+  letter-spacing: 25px;
+}
+
+.line.bottom-right {
+  bottom: 15%; /* Отступ снизу */
+  right: 5%; /* Отступ справа */
+  letter-spacing: 25px;
+}
+
+.inner {
+  display: inline; /* Внутренний текст остается в строке */
+}
+
+/* Текст внизу */
+.hero-footer {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Отступ текст-кнопка */
+}
+
+.subtitle {
+  font-family: url('../fonts/Raleway-Regular.woff'); /* путь к шрифтам */
+  font-size: 20px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+/* Кнопка */
+.cta-button {
+  display: inline-block;
+  width: 256px;
+  height: 51px;
+  right: 5%;
+  color: #ffffff;
+  text-align: center;
+  line-height: 51px; /* Центр текста по вертикали */
+  text-decoration: none; /* 0ое подчеркивание */
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #ffffff; /* рамка */
+  background: transparent; /* Прозрачный фон */
+  transition: background-color 0.3s, color 0.3s; /* Эффект наведения */
+}
+
+/* Эффект при наведении */
+.cta-button:hover {
+  background: rgba(255, 255, 255, 0.2); /* белый полупрозрачный фон */
+  color: #ffffff; 
+}
+
+/* Секция Лоты */
+.lots {
+  width: 100%;
+  padding: 50px 5%; /* Отступы сверху, снизу и по бокам */
+  background-color: #ffffff; 
+  text-align: center;
+}
+
+/* Заголовок секции */
+.section-title {
+  font-family: url('../fonts/Raleway-Regular.woff'); /* путь к шрифтам */
+  width: 121px;
+  height: 47px;
+  left: 40px;
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+/* Контейнер для карточек */
+.lots-grid {
+  display: flex;
+  justify-content: space-between; /* Равномерное распределение карточки */
+  gap: 20px; /* Расстояние между карточками */
+}
+
+/* Карточка */
+.lot {
+  font-family: url('../fonts/Raleway-Regular.woff');
+  width: 1052px;
+  height: 692px;
+  justify-content: space-between; /* равномерное распределение */
+  flex: 1; /* Растягивание карточки равномерно */  
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.lot-content {
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
+    padding: 20px;
+    left: 0;
+}
+
+/* Изображение карточки */
+.lot-image {
+  width: 121px;
+  height: 47px;
+  left: 40px;
+
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0; /* Скругление верхних углов */
+}
+
+/* Контент карточки */
+.lot-content {
+  padding-top: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Почти полупрозрачный чёрный фон */
+  color: #ffffff;
+}
+
+/* Заголовок карточки */
+.lot-title1 {
+  width: 254px;
+  height: 82px;
+  top: 125px;
+  left: 40px;
+  font-weight: bold;
+  text-decoration: underline; /* Подчёркивание текста */
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26.4px;
+  padding-bottom: 450px;
+}
+
+/* Описание карточки */
+.lot-description1 {
+  width: 254px;
+  height: 144px;
+  top: 445px;
+  left: 40px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  padding-bottom: 250px;
+  
+}
+
+/* Заголовок карточки */
+.lot-title2 {
+  width: 254px;
+  height: 110px;
+  top: 125px;
+  left: 399px;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline; /* Подчёркивание текста */
+  text-align: left;
+  margin-bottom: 0px;
+  line-height: 26.4px;
+  padding-bottom: 0px;
+}
+
+/* Описание карточки */
+.lot-description2 {
+  width: 254px;
+  height: 360px;
+  top: 229px;
+  left: 399px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  padding-bottom: 600px;
+  }
+
+/* Заголовок карточки */
+.lot-title3 {
+  width: 254px;
+  height: 110px;
+  top: 125px;
+  left: 758px;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline; /* Подчёркивание текста */
+  text-align: left;
+  margin-bottom: 180px;
+}
+
+/* Описание карточки */
+.lot-description3 {
+  width: 254px;
+  height: 264px;
+  top: 325px;
+  left: 758px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  padding-bottom: 600px;
+}
+
+/* "Посмотреть больше" */
+.see-more {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #000000; 
+  cursor: pointer;
+  text-decoration: underline; /* Подчёркивание */
+}
+
+/* Секция "Об аукционе" */
+.about-auction {
+  width: 100%;
+  padding: 50px 5%;
+  background-color: #ffffff; 
+  color: #000000; 
+  line-height: 1.6;
+}
+
+/* Заголовок и логотип */
+.about-header {
+  display: flex;
+  align-items: center; /* Центр по вертикали */
+  gap: 20px; /* Расстояние между логотипом и заголовком */
+  margin-bottom: 30px;
+}
+
+/* Черный круг */
+.logo-circle {
+  width: 240px;
+  height: 240px;
+  background-color: #000000; 
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center; /* Центр логотипа по горизонтали */
+  align-items: center; /* Центр логотипа по вертикали */
+}
+
+/* Логотип */
+.about-logo { /* Размер логотипа */
+  width: 120px; 
+  height: auto;
+}
+
+/* Заголовок */
+.about-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Текст секции */
+.about-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  margin-left: 250px;
+  text-align: justify; /* Выравнивание текста по ширине */
+}
+
+/* Общий стиль футера */
+.footer {
+  width: 100%;
+  background-color: #ffffff; 
+  color: #000000; 
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between; /* равномерное распределение */
+  align-items: flex-start; /* Выравнивание по верхнему краю */
+  flex-wrap: wrap; /* перенос на новую строку */
+  gap: 20px; /* Расстояние между блоками */
+}
+
+/* Контакты */
+.footer-contacts {
+  max-width: 300px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Ссылки в контактах */
+.footer-link {
+  color: #000000; 
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: block; /* Новая ссылка с новой строки */
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Навигация */
+.footer-nav {
+  display: flex;
+  flex-direction: column; /* Расположение элементов в колонку */
+  gap: 10px; /* Расстояние между элементами */
+}
+
+.footer-nav-link {
+  color: #000000; 
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-nav-link.active { /* Выделение активных элементов */
+  font-weight: bold; 
+}
+
+.footer-nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Социальные сети */
+.footer-socials {
+  display: flex;
+  gap: 20px; /* Расстояние между логотипами */
+}
+
+.social-logo { /* Размер иконок */
+  width: 32px; 
+  height: 32px;
+  cursor: pointer;
+}
+
+.social-logo:hover {
+  opacity: 0.8; /* наведение */
+}
+ 
