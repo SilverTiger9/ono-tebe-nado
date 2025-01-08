@@ -2,23 +2,27 @@
   /* Общие стили */
 body {
   margin: 0;
-  font-family: url('../fonts/Raleway-Bold.woff'); /* путь к шрифтам */
+  font-family: 'Raleway-Regular', sans-serif;
+  background-color: #ffffff;
 }
 
 /* Стили header */
-.header {
+header {
   width: 1052px;
   height: 105px;
-  margin: 92px auto 0; /* Центровка и отступ сверху */
-  display: flex;
+  margin: 92px auto; 
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   justify-content: space-between;
 }
 
 /* Стили навигации */
 .nav-menu {
+  /* border: 1px 0px 0px 0px;
+  opacity: 0px; */
   display: flex;
-  gap: 20px; /* Отступ между пунктами */
+  gap: 20px;
 }
 
 .nav-link {
@@ -28,30 +32,29 @@ body {
   border-bottom: 1px solid transparent;
 }
 
-.nav-link.active {
-  border-bottom: 1px solid #000000;
-  font-weight: bold;
-}
 
 .nav-link .bullet {
-  margin-right: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 /* Стили логотипа */
 .logo img {
-  width: 129.11px;
-  height: 104.65px;
+  width: 148px;
+  height: 105px;
 }
 
 /* Стили контактов */
 .contacts {
-  text-align: right;
-  font-family: url('../fonts/Raleway-Regular.woff'); /* путь к шрифтам */
+  text-align: left; 
+  padding-left: 200px;
+  font-family: Raleway, sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .contact-link {
   display: block;
-  text-decoration: none;
   font-size: 14px;
   color: #000000;
   margin-bottom: 5px;
@@ -59,12 +62,6 @@ body {
 
 .contact-link:hover {
   text-decoration: underline;
-}
-
-.contacts address {
-  word-wrap: break-word; /* Старое название, поддерживается в большинстве браузеров */
-  overflow-wrap: anywhere; /* Современное название, для максимальной совместимости */
-  line-height: 1.5; /* читабельность текста */
 }
 
 /* Hero Section */
@@ -89,16 +86,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Расстояние текста по вертикали */
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Основной текст */
 .hero-text {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 20%;
-  bottom: 20%;
-  left: 0;
+  width: 1000px;
+  height: 355px;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -108,7 +102,6 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 5vw; /* Размер шрифта подстраивается под ширину экрана */
-  color: white;
   letter-spacing: 0.5vw; /* Расстояние между буквами */
   line-height: 1.2; /* Расстояние между строками */
   text-transform: uppercase;
@@ -188,142 +181,85 @@ body {
 
 /* Секция Лоты */
 .lots {
-  width: 100%;
   padding: 50px 5%; /* Отступы сверху, снизу и по бокам */
   background-color: #ffffff;
   text-align: center;
+  width: 1052px;
+  height: 692px;
 }
 
 /* Заголовок секции */
-.section-title {
-  font-family: url('../fonts/Raleway-Regular.woff'); /* путь к шрифтам */
+.lots-heading {
+  font-family: 'Raleway-Regular', sans-serif; /* путь к шрифтам */
   width: 121px;
   height: 47px;
-  left: 40px;
+  text-transform: uppercase;
   font-size: 36px;
   color: #000000;
   margin-bottom: 30px;
 }
 
 /* Контейнер для карточек */
-.lots-grid {
-  display: flex;
-  justify-content: space-between; /* Равномерное распределение карточки */
-  gap: 20px; /* Расстояние между карточками */
+.lots__card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between; 
+  gap: 20px; 
+}
+
+li {
+  list-style: initial;
+  text-align: left;
 }
 
 /* Карточка */
 .lot {
-  font-family: url('../fonts/Raleway-Regular.woff');
-  width: 1052px;
-  height: 692px;
-  justify-content: space-between; /* равномерное распределение */
-  flex: 1; /* Растягивание карточки равномерно */
+  width: 334px;
+  height: 563px; 
   display: flex;
-  flex-direction: column;
-  background-color: transparent;
-  overflow: hidden;
+  background-size: cover; 
+  background-position: center;
+  color: #ffffff;
 }
 
 /* Изображение карточки */
 .lot-image {
-  width: 121px;
-  height: 47px;
-  left: 40px;
+  width: 334px;
+  height: 563px;
   background-size: cover;
   background-position: center;
   border-radius: 10px 10px 0 0; /* Скругление верхних углов */
 }
 
-/* Контент карточки */
-.lot-content {
-  left: 0;
-  padding-top: 20px;
-  background-color: rgba(0, 0, 0, 0.7); /* Почти полупрозрачный чёрный фон */
-  color: #ffffff;
+.lot-bg {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%; 
+  padding: 40px;
 }
 
 /* Заголовок карточки */
-.lot-title1 {
-  width: 254px;
-  height: 82px;
-  top: 125px;
-  left: 40px;
-  text-decoration: underline; /* Подчёркивание текста */
-  text-align: left;
-  margin-bottom: 10px;
-  font-weight: 700;
+.lot-title {
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
   font-size: 22px;
   line-height: 26.4px;
-  padding-bottom: 450px;
+  margin-bottom: auto; /* Смещаем вверх относительно конца карточки */
+  position: relative;
 }
 
 /* Описание карточки */
-.lot-description1 {
-  width: 254px;
-  height: 144px;
-  top: 445px;
-  left: 40px;
-  font-size: 22px;
-  font-weight: 400;
+.lot-description {
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
   line-height: 24px;
   text-align: left;
-  padding-bottom: 250px;
-  
-}
-
-/* Заголовок карточки */
-.lot-title2 {
-  width: 254px;
-  height: 110px;
-  top: 125px;
-  left: 399px;
-  font-size: 22px;
-  font-weight: 700;
-  text-decoration: underline; /* Подчёркивание текста */
-  text-align: left;
-  margin-bottom: 0px;
-  line-height: 26.4px;
-  padding-bottom: 0px;
-}
-
-/* Описание карточки */
-.lot-description2 {
-  width: 254px;
-  height: 360px;
-  top: 229px;
-  left: 399px;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-  padding-bottom: 600px;
-  }
-
-/* Заголовок карточки */
-.lot-title3 {
-  width: 254px;
-  height: 110px;
-  top: 125px;
-  left: 758px;
-  font-size: 22px;
-  font-weight: 700;
-  text-decoration: underline; /* Подчёркивание текста */
-  text-align: left;
-  margin-bottom: 180px;
-}
-
-/* Описание карточки */
-.lot-description3 {
-  width: 254px;
-  height: 264px;
-  top: 325px;
-  left: 758px;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-  padding-bottom: 600px;
+  margin-top: auto; /* Смещаем текст вниз */
+  position: relative;
 }
 
 /* "Посмотреть больше" */
@@ -337,19 +273,21 @@ body {
 
 /* Секция "Об аукционе" */
 .about-auction {
-  width: 100%;
+  width: 1052px;
+  height: 595px;
   padding: 50px 5%;
   background-color: #ffffff;
   color: #000000;
-  line-height: 1.6;
+  margin-bottom: 200px;
 }
 
 /* Заголовок и логотип */
 .about-header {
   display: flex;
   align-items: center; /* Центр по вертикали */
-  gap: 20px; /* Расстояние между логотипом и заголовком */
-  margin-bottom: 30px;
+  gap: 20px; 
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 /* Черный круг */
@@ -378,15 +316,18 @@ body {
 
 /* Текст секции */
 .about-content p {
+  font-family: Raleway, sans-serif;
+  font-weight: normal;
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 24px;
   margin-left: 250px;
   text-align: justify; /* Выравнивание текста по ширине */
 }
 
 /* Общий стиль футера */
 .footer {
-  width: 100%;
+  width: 1000px;
   background-color: #ffffff;
   color: #000000;
   padding: 20px 5%;
@@ -395,13 +336,6 @@ body {
   align-items: flex-start; /* Выравнивание по верхнему краю */
   flex-wrap: wrap; /* перенос на новую строку */
   gap: 20px; /* Расстояние между блоками */
-}
-
-/* Контакты */
-.footer-contacts {
-  max-width: 300px;
-  font-size: 14px;
-  line-height: 1.6;
 }
 
 /* Ссылки в контактах */
@@ -419,8 +353,12 @@ body {
 /* Навигация */
 .footer-nav {
   display: flex;
-  flex-direction: column; /* Расположение элементов в колонку */
-  gap: 10px; /* Расстояние между элементами */
+  flex-direction: column;
+  align-items: center; /* Центрирование элементов по горизонтали */
+  justify-content: center; /* Центрирование по вертикали, если потребуется */
+  text-align: center; /* Выравнивание текста по центру */
+  font-family: Raleway;
+  font-weight: normal;
 }
 
 .footer-nav-link {
@@ -429,11 +367,14 @@ body {
   font-size: 14px;
 }
 
-.footer-nav-link.active { /* Выделение активных элементов */
-  font-weight: bold;
+.footer-nav-link-active {
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  text-decoration: underline;
 }
 
-.footer-nav-link:hover {
+.footer-nav-link-active:hover {
   text-decoration: underline;
 }
 
