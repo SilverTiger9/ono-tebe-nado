@@ -341,18 +341,6 @@ li {
   gap: 20px; /* Расстояние между блоками */
 }
 
-/* Ссылки в контактах */
-.footer-link {
-  color: #000000;
-  text-decoration: none;
-  margin-bottom: 5px;
-  display: block; /* Новая ссылка с новой строки */
-}
-
-.footer-link:hover {
-  text-decoration: underline;
-}
-
 /* Навигация */
 .footer-nav {
   display: flex;
