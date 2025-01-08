@@ -186,6 +186,7 @@ header {
   text-align: center;
   width: 1052px;
   height: 692px;
+  margin-top: 200px;
 }
 
 /* Заголовок секции */
@@ -268,6 +269,7 @@ li {
   color: #000000;
   cursor: pointer;
   text-decoration: underline; /* Подчёркивание */
+  position: left;
 }
 
 /* Секция "Об аукционе" */
@@ -277,7 +279,10 @@ li {
   padding: 50px 5%;
   background-color: #ffffff;
   color: #000000;
+  margin-top: 200px;
   margin-bottom: 200px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
 }
 
 /* Заголовок и логотип */
@@ -310,6 +315,7 @@ li {
   font-size: 36px;
   font-weight: bold;
   color: #000000;
+  padding-left: 50px;
 }
 
 /* Текст секции */
@@ -320,7 +326,6 @@ li {
   font-size: 20px;
   line-height: 24px;
   margin-left: 250px;
-  text-align: justify; /* Выравнивание текста по ширине */
 }
 
 /* Общий стиль футера */
@@ -373,7 +378,7 @@ li {
 }
 
 .footer-nav-link-active:hover {
-  text-decoration: underline;
+  text-decoration: bold;
 }
 
 /* Социальные сети */
