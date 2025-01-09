@@ -1,1 +1,1 @@
-https://github.com/SilverTiger9/ono-tebe-nado
+https://github.com/SilverTiger9/ono-tebe-nado-fd
